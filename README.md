@@ -1,45 +1,63 @@
 <div align="center">
 
-# 🦑 Cuttlefish.MD
+# 🦑 Project Cuttlefish.MD
 
-### The license-verified Agent Skills marketplace, by HackerNoon
+### Read all the useful SKILL.md files. Then install them.
 
-**<!-- COUNT -->891<!-- /COUNT --> agent skills from <!-- AUTHORS -->12<!-- /AUTHORS --> authors. Install them by category with one command. Every skill keeps its credit.**
+**The SKILL.md Library by [HackerNoon](https://hackernoon.com), packaged as an installable Agent Skills marketplace.**
 
-[![Skills](https://img.shields.io/badge/skills-891-00ff41?style=flat-square)](catalog.json)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin%20marketplace-black?style=flat-square)](https://docs.claude.com/en/docs/claude-code/plugins)
-[![License checked](https://img.shields.io/badge/licenses-checked%20per%20skill-00ff41?style=flat-square)](#how-a-skill-gets-in)
-[![Browse](https://img.shields.io/badge/browse-hackernoon.com%2Fskills-black?style=flat-square)](https://hackernoon.com/skills)
+[![Skills in this repo](https://img.shields.io/badge/skills-891-00ff41?style=flat-square)](catalog.json)
+[![Library](https://img.shields.io/badge/library-2%2C908%20skills-black?style=flat-square)](https://hackernoon.com/skills-md-library-project-cuttlefish-md)
+[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-open%20standard-00ff41?style=flat-square)](https://agentskills.io)
 [![GitHub stars](https://img.shields.io/github/stars/hackernoon/cuttlefish-agent-skills?style=flat-square)](https://github.com/hackernoon/cuttlefish-agent-skills/stargazers)
+
+**[→ Browse all 2,908 skills in full text at hackernoon.com](https://hackernoon.com/skills-md-library-project-cuttlefish-md)**
 
 </div>
 
 ---
 
-## Install in 10 seconds
+## What this is
+
+[Project Cuttlefish.MD](https://hackernoon.com/skills-md-library-project-cuttlefish-md) is HackerNoon's library of the most capable, adaptive and verified `SKILL.md` files, published in full text rather than as scraped snippets. On the site you read a skill, copy it and paste it into your agent. Installing is optional.
+
+This repo is the install option. It packages every skill from the library whose license allows redistribution into category plugins, so Claude Code, Codex, Cursor or any agent that supports the [open Agent Skills standard](https://agentskills.io) can load them directly.
+
+Each skill in the library is:
+
+- **Credited** to its original author, with a link to the source repo
+- **License-checked** one repo at a time
+- **Verified** by HackerNoon's human editors
+
+## Why a cuttlefish?
+
+A cuttlefish studies its habitat, then changes to fit it. A good `SKILL.md` does the same for your agent. Cuttlefish.MD is meant to help you and your agent use any skill, in any ocean.
+
+## Install
+
+**Claude Code:**
 
 ```text
 /plugin marketplace add hackernoon/cuttlefish-agent-skills
 /plugin install dev-workflow@cuttlefish
 ```
 
-That's it. No copy-pasting SKILL.md files. Run `/plugin` to browse the other categories.
+Run `/plugin` to browse the other categories.
 
-### Use with any agent
-
-These are standard [Agent Skills](https://agentskills.io), the open SKILL.md format supported by 30+ tools, so they aren't tied to Claude. Each skill lives at `plugins/<category>/skills/<skill>/`. Copy or symlink that folder into your agent's skills directory:
+**Codex CLI, Cursor, Gemini CLI and other Agent Skills tools:** clone the repo and copy a category's skill folders into your agent's skills directory:
 
 ```bash
 git clone https://github.com/hackernoon/cuttlefish-agent-skills
-# Codex CLI and other .agents-compatible tools, for one repo:
 cp -r cuttlefish-agent-skills/plugins/writing-blogging/skills/* your-project/.agents/skills/
-# ...or for every project:
-cp -r cuttlefish-agent-skills/plugins/dev-workflow/skills/* ~/.agents/skills/
 ```
 
-For Cursor, Gemini CLI, Copilot and other agents, use the skills folder named in that tool's docs. The files work unchanged.
+Codex reads `.agents/skills/` in a project or `~/.agents/skills/` for every project. For other tools, use the skills folder named in that tool's docs. The files work unchanged.
+
+**No install at all:** read and copy any skill at [hackernoon.com/skills-md-library-project-cuttlefish-md](https://hackernoon.com/skills-md-library-project-cuttlefish-md).
 
 ## What's inside
+
+**<!-- COUNT -->891<!-- /COUNT --> skills from <!-- AUTHORS -->12<!-- /AUTHORS --> authors**, sorted into the same categories as the library:
 
 <!-- TABLE -->
 | Plugin | Skills | Install |
@@ -55,53 +73,50 @@ For Cursor, Gemini CLI, Copilot and other agents, use the skills folder named in
 | **Learn Tech** | 4 | `/plugin install learn-tech@cuttlefish` |
 <!-- /TABLE -->
 
-Every skill, with its author, source repo, exact commit and license, is listed in [`catalog.json`](catalog.json).
+Each skill's author, source repo, exact commit and license are listed in [`catalog.json`](catalog.json).
 
-## Why Cuttlefish?
+## HackerNoon Originals
 
-A cuttlefish can change its skin to match whatever it's doing. Skills do the same for your agent: plan like a staff engineer, debug systematically, audit SEO, write a blog post, parse a genome.
+| Skill | What it does | Status |
+|---|---|---|
+| `pixel-icon-library` | Uses the [Pixel Icon Library](https://pixeliconlibrary.com), the icon set HackerNoon is drawn with | ✅ Live |
+| `write-for-hackernoon` | Draft, self-edit and submit to the [HackerNoon Editing Protocol](https://hackernoon.com/the-hackernoon-editing-protocol) | 🛠 Shipping soon |
+| `tech-blogging` | Headlines and structure drawn from 150K+ HackerNoon stories | 🛠 Shipping soon |
 
-Most skill collections are hand-picked lists or copy-paste dumps. Cuttlefish differs in three ways:
+## Why 2,908 on the site and fewer here?
 
-- **Licenses are checked for every skill, not every repo.** A skill's own LICENSE file overrides its repo's. Anthropic's repo, for example, mixes Apache-2.0 skills with proprietary ones, and we only ship the Apache ones.
-- **Credit travels with the code.** Every skill folder carries its license plus an `ATTRIBUTION.md` naming the author and the exact source commit.
-- **Humans curate it.** These come from [HackerNoon's SKILL.md Library](https://hackernoon.com/skills), where editors review skills before they're listed.
+The library lists every useful skill HackerNoon's editors have verified. This repo republishes only the ones whose licenses allow it: MIT, Apache-2.0, BSD and CC-BY, judged per skill, because a skill's own LICENSE overrides its repo's.
 
-## How a skill gets in
+- **Copied in:** licensed skills are copied unchanged, with their license file and an `ATTRIBUTION.md` naming the author and the exact source commit.
+- **Link-only:** unlicensed or "all rights reserved" skills stay on the site, linked to their authors. They're never copied here and are logged in [`skipped.json`](skipped.json).
 
-1. Its source repo is added to [`scripts/sources.json`](scripts/sources.json).
-2. `scripts/build.py` clones the repo, finds every `SKILL.md`, and reads the nearest LICENSE.
-3. **MIT, Apache-2.0, BSD and CC-BY** skills are copied in unchanged, plus an `ATTRIBUTION.md`.
-4. **Unlicensed or "all rights reserved"** skills are never copied. They're logged in [`skipped.json`](skipped.json), and the library lists them as link-only pointers to the author's repo.
-5. Skills are sorted into category plugins, and this README's numbers regenerate automatically.
+More of the library's source repos are being added. Watch or star the repo to follow along.
 
 ## Featured authors
 
-Anthropic · Jesse Vincent ([superpowers](https://github.com/obra/superpowers)) · Matt Pocock · Cloudflare · Vercel Labs · Corey Haines · Tech Leads Club · Daniel Agrici · Thomas Ricouard · GPTomics · and the HackerNoon design team ([Pixel Icon Library](https://pixeliconlibrary.com))
+Anthropic · Jesse Vincent ([superpowers](https://github.com/obra/superpowers)) · Matt Pocock · Cloudflare · Vercel Labs · Corey Haines · Tech Leads Club · Daniel Agrici · Thomas Ricouard · GPTomics · and HackerNoon's design team
 
-## For skill authors
-
-- **Get listed.** Open an issue with your repo URL, or submit it at [hackernoon.com/skills](https://hackernoon.com/skills). Repos with open licenses get packaged automatically.
-- **Change or remove a skill.** Open an issue, or email support@hackernoon.com. We act on author requests quickly.
-- **Add your badge:** `[![On Cuttlefish](https://img.shields.io/badge/on-Cuttlefish.MD-00ff41?style=flat-square)](https://github.com/hackernoon/cuttlefish-agent-skills)`
+**Are you an author?** To have a skill removed, recategorized or updated, open an issue or email support@hackernoon.com.
 
 ## Build it yourself
 
 ```bash
 git clone https://github.com/hackernoon/cuttlefish-agent-skills
 cd cuttlefish-agent-skills
-python3 scripts/build.py        # clones sources into .cache/ and regenerates plugins/
+python3 scripts/build.py        # clones the sources in scripts/sources.json and regenerates plugins/
 claude plugin validate .        # checks the marketplace and every plugin
 ```
 
-## ⭐ Star this repo
+The skill counts and the table in this README regenerate on every build.
 
-Stars help other people find the library, and they tell us which categories to grow next. **If one skill here saved you an hour, star the repo.**
+## ⭐ Star Cuttlefish.MD
+
+Stars help other developers find the library, and they tell us which oceans to explore next.
 
 ---
 
 <div align="center">
 
-Built by [HackerNoon](https://hackernoon.com) · Browse the full library at [hackernoon.com/skills](https://hackernoon.com/skills) · Marketplace tooling MIT · Each skill keeps its own license
+Built by [HackerNoon](https://hackernoon.com) · [Read every skill in full text](https://hackernoon.com/skills-md-library-project-cuttlefish-md) · Marketplace tooling MIT · Each skill keeps its own license
 
 </div>
