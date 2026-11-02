@@ -19,19 +19,13 @@
 
 ## What this is
 
-[Project Cuttlefish.MD](https://hackernoon.com/skills-md-library-project-cuttlefish-md) is HackerNoon's library of the most capable, adaptive and verified `SKILL.md` files, published in full text rather than as scraped snippets. On the site you read a skill, copy it and paste it into your agent. Installing is optional.
+Read the most capable, adaptive, and verified `Skills.md` files in full text — no install commands required (but feel free to install), no scraped snippets, just copy and paste `Skills.md` files. Credited to their original authors, licenses checked one repo at a time, verified by human editors. That's [Project Cuttlefish.MD](https://hackernoon.com/skills-md-library-project-cuttlefish-md).
 
-This repo is the install option. It packages every skill from the library whose license allows redistribution into category plugins, so Claude Code, Codex, Cursor or any agent that supports the [open Agent Skills standard](https://agentskills.io) can load them directly.
-
-Each skill in the library is:
-
-- **Credited** to its original author, with a link to the source repo
-- **License-checked** one repo at a time
-- **Verified** by HackerNoon's human editors
+This repo is the "feel free to install" part. It packages every skill from the library whose license allows redistribution into category plugins, so Claude Code, Codex, Cursor or any agent that supports the [open Agent Skills standard](https://agentskills.io) can load them directly.
 
 ## Why a cuttlefish?
 
-A cuttlefish studies its habitat, then changes to fit it. A good `SKILL.md` does the same for your agent. Cuttlefish.MD is meant to help you and your agent use any skill, in any ocean.
+A Cuttlefish, like a `Skill.md` file, studies its habitat, then evolves. Project Cuttlefish.MD is for you and your agent to leverage any skill in any ocean.
 
 ## Install
 
