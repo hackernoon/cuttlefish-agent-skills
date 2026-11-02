@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🦑 Project Cuttlefish.MD
+<img src="assets/cuttlefish.svg" alt="Pixel cuttlefish" width="264">
+
+# Project Cuttlefish.MD
 
 ### Read all the useful SKILL.md files. Then install them.
 
@@ -88,7 +90,11 @@ More of the library's source repos are being added. Watch or star the repo to fo
 
 ## Featured authors
 
-<!-- AUTHOR_LIST -->[GPTomics](https://github.com/GPTomics/bioSkills) (562) · [Tech Leads Club](https://github.com/tech-leads-club/agent-skills) (94) · [Daniel Agrici](https://github.com/AgriciDaniel/claude-seo) (67) · [Corey Haines](https://github.com/coreyhaines31/marketingskills) (53) · [Matt Pocock (Total TypeScript)](https://github.com/mattpocock/skills) (39) · [Cloudflare](https://github.com/cloudflare/skills) (19) · [Thomas Ricouard](https://github.com/Dimillian/Skills) (16) · [Jesse Vincent (obra)](https://github.com/obra/superpowers) (15) · [Anthropic](https://github.com/anthropics/skills) (14) · [Vercel Labs](https://github.com/vercel-labs/agent-browser) (10) · [lackeyjb](https://github.com/lackeyjb/playwright-skill) (1) · [HackerNoon](https://github.com/hackernoon/pixel-icon-library) (1)<!-- /AUTHOR_LIST -->
+<!-- AUTHOR_LIST -->
+
+[GPTomics](https://github.com/GPTomics/bioSkills) (562) · [Tech Leads Club](https://github.com/tech-leads-club/agent-skills) (94) · [Daniel Agrici](https://github.com/AgriciDaniel/claude-seo) (67) · [Corey Haines](https://github.com/coreyhaines31/marketingskills) (53) · [Matt Pocock (Total TypeScript)](https://github.com/mattpocock/skills) (39) · [Cloudflare](https://github.com/cloudflare/skills) (19) · [Thomas Ricouard](https://github.com/Dimillian/Skills) (16) · [Jesse Vincent (obra)](https://github.com/obra/superpowers) (15) · [Anthropic](https://github.com/anthropics/skills) (14) · [Vercel Labs](https://github.com/vercel-labs/agent-browser) (10) · [lackeyjb](https://github.com/lackeyjb/playwright-skill) (1) · [HackerNoon](https://github.com/hackernoon/pixel-icon-library) (1)
+
+<!-- /AUTHOR_LIST -->
 
 **Are you an author?** To have a skill removed, recategorized or updated, open an issue or email support@hackernoon.com.
 
