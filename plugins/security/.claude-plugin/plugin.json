@@ -1,0 +1,16 @@
+{
+  "name": "security",
+  "version": "0.1.0",
+  "description": "Security audits, secure coding and vulnerability-review skills. 4 skills from Tech Leads Club.",
+  "author": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com/skills"
+  },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "SEE ATTRIBUTION.md IN EACH SKILL",
+  "keywords": [
+    "skills",
+    "hackernoon",
+    "security"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "learn-tech",
+  "version": "0.1.0",
+  "description": "Skills that teach: tutorials, exercises and learning loops. 4 skills from Anthropic, Matt Pocock (Total TypeScript), Tech Leads Club.",
+  "author": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com/skills"
+  },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "SEE ATTRIBUTION.md IN EACH SKILL",
+  "keywords": [
+    "skills",
+    "hackernoon",
+    "learn-tech"
+  ]
+}

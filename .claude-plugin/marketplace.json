@@ -1,0 +1,121 @@
+{
+  "name": "cuttlefish",
+  "owner": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com"
+  },
+  "metadata": {
+    "description": "Cuttlefish.MD by HackerNoon: license-verified SKILL.md files, installable by category.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "hackernoon-originals",
+      "source": "./plugins/hackernoon-originals",
+      "description": "Skills written by HackerNoon: Pixel Icon Library, writing for HackerNoon, tech blogging.",
+      "version": "0.1.0",
+      "category": "HackerNoon Originals",
+      "keywords": [
+        "hackernoon",
+        "pixel-icons",
+        "blogging"
+      ]
+    },
+    {
+      "name": "dev-workflow",
+      "source": "./plugins/dev-workflow",
+      "description": "Planning, debugging, code review, git, agents and everyday engineering workflow skills. 131 skills from Anthropic, Cloudflare, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club, Thomas Ricouard.",
+      "version": "0.1.0",
+      "category": "Dev Workflow",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "dev-workflow"
+      ]
+    },
+    {
+      "name": "writing-blogging",
+      "source": "./plugins/writing-blogging",
+      "description": "Skills for drafting, structuring and editing blog posts, docs and research writing. 43 skills from Anthropic, Daniel Agrici, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club.",
+      "version": "0.1.0",
+      "category": "Writing & Blogging",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "writing-blogging"
+      ]
+    },
+    {
+      "name": "design-ui",
+      "source": "./plugins/design-ui",
+      "description": "Frontend design, brand, canvas and visual-output skills. 18 skills from Anthropic, Matt Pocock (Total TypeScript), Tech Leads Club, Thomas Ricouard.",
+      "version": "0.1.0",
+      "category": "Design & UI",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "design-ui"
+      ]
+    },
+    {
+      "name": "marketing-seo",
+      "source": "./plugins/marketing-seo",
+      "description": "Copywriting, SEO audits, pricing, launch and growth skills. 108 skills from Cloudflare, Corey Haines, Daniel Agrici, Tech Leads Club.",
+      "version": "0.1.0",
+      "category": "Marketing & SEO",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "marketing-seo"
+      ]
+    },
+    {
+      "name": "qa-testing",
+      "source": "./plugins/qa-testing",
+      "description": "TDD, browser automation, QA and test-writing skills. 19 skills from Anthropic, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club, Vercel Labs, lackeyjb.",
+      "version": "0.1.0",
+      "category": "QA & Testing",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "qa-testing"
+      ]
+    },
+    {
+      "name": "security",
+      "source": "./plugins/security",
+      "description": "Security audits, secure coding and vulnerability-review skills. 4 skills from Tech Leads Club.",
+      "version": "0.1.0",
+      "category": "Security",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "security"
+      ]
+    },
+    {
+      "name": "data-science",
+      "source": "./plugins/data-science",
+      "description": "Data analysis, scientific computing and bioinformatics skills (genomics, proteomics, single-cell and more). 563 skills from Cloudflare, GPTomics.",
+      "version": "0.1.0",
+      "category": "Data & Science",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "data-science"
+      ]
+    },
+    {
+      "name": "learn-tech",
+      "source": "./plugins/learn-tech",
+      "description": "Skills that teach: tutorials, exercises and learning loops. 4 skills from Anthropic, Matt Pocock (Total TypeScript), Tech Leads Club.",
+      "version": "0.1.0",
+      "category": "Learn Tech",
+      "keywords": [
+        "skills",
+        "hackernoon",
+        "learn-tech"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "data-science",
+  "version": "0.1.0",
+  "description": "Data analysis, scientific computing and bioinformatics skills (genomics, proteomics, single-cell and more). 563 skills from Cloudflare, GPTomics.",
+  "author": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com/skills"
+  },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "SEE ATTRIBUTION.md IN EACH SKILL",
+  "keywords": [
+    "skills",
+    "hackernoon",
+    "data-science"
+  ]
+}

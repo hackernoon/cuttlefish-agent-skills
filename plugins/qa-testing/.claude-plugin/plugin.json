@@ -1,0 +1,16 @@
+{
+  "name": "qa-testing",
+  "version": "0.1.0",
+  "description": "TDD, browser automation, QA and test-writing skills. 19 skills from Anthropic, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club, Vercel Labs, lackeyjb.",
+  "author": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com/skills"
+  },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "SEE ATTRIBUTION.md IN EACH SKILL",
+  "keywords": [
+    "skills",
+    "hackernoon",
+    "qa-testing"
+  ]
+}

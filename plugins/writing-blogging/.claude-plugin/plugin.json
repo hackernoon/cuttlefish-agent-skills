@@ -1,0 +1,16 @@
+{
+  "name": "writing-blogging",
+  "version": "0.1.0",
+  "description": "Skills for drafting, structuring and editing blog posts, docs and research writing. 43 skills from Anthropic, Daniel Agrici, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club.",
+  "author": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com/skills"
+  },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "SEE ATTRIBUTION.md IN EACH SKILL",
+  "keywords": [
+    "skills",
+    "hackernoon",
+    "writing-blogging"
+  ]
+}

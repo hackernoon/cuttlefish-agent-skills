@@ -1,0 +1,9 @@
+{
+  "name": "hackernoon-originals",
+  "version": "0.1.0",
+  "description": "Skills written by HackerNoon, starting with the Pixel Icon Library. Writing-for-HackerNoon and tech-blogging skills are shipping soon.",
+  "author": { "name": "HackerNoon", "url": "https://hackernoon.com/skills" },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "MIT",
+  "keywords": ["hackernoon", "pixel-icons", "design", "blogging"]
+}

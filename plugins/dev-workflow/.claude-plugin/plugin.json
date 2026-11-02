@@ -1,0 +1,16 @@
+{
+  "name": "dev-workflow",
+  "version": "0.1.0",
+  "description": "Planning, debugging, code review, git, agents and everyday engineering workflow skills. 131 skills from Anthropic, Cloudflare, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club, Thomas Ricouard.",
+  "author": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com/skills"
+  },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "SEE ATTRIBUTION.md IN EACH SKILL",
+  "keywords": [
+    "skills",
+    "hackernoon",
+    "dev-workflow"
+  ]
+}

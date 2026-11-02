@@ -1,0 +1,37 @@
+[
+ {
+  "repo": "anthropics/skills",
+  "path": "skills/doc-coauthoring",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "anthropics/skills",
+  "path": "skills/docx",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "anthropics/skills",
+  "path": "skills/pdf",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "anthropics/skills",
+  "path": "skills/pptx",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "anthropics/skills",
+  "path": "skills/xlsx",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "anthropics/skills",
+  "path": "template",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "AgriciDaniel/claude-blog",
+  "path": "brain",
+  "reason": "license not redistributable"
+ }
+]

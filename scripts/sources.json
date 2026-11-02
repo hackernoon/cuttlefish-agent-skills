@@ -1,0 +1,14 @@
+[
+  {"repo": "anthropics/skills",             "author": "Anthropic",                    "slug": "anthropic"},
+  {"repo": "obra/superpowers",              "author": "Jesse Vincent (obra)",         "slug": "obra", "default_category": "dev-workflow"},
+  {"repo": "mattpocock/skills",             "author": "Matt Pocock (Total TypeScript)", "slug": "mattpocock"},
+  {"repo": "vercel-labs/agent-browser",     "author": "Vercel Labs",                  "slug": "vercel", "category": "qa-testing"},
+  {"repo": "coreyhaines31/marketingskills", "author": "Corey Haines",                 "slug": "coreyhaines", "category": "marketing-seo"},
+  {"repo": "tech-leads-club/agent-skills",  "author": "Tech Leads Club",              "slug": "techleads"},
+  {"repo": "AgriciDaniel/claude-seo",       "author": "Daniel Agrici",                "slug": "agrici", "category": "marketing-seo"},
+  {"repo": "AgriciDaniel/claude-blog",      "author": "Daniel Agrici",                "slug": "agrici-blog", "category": "writing-blogging"},
+  {"repo": "Dimillian/Skills",              "author": "Thomas Ricouard",              "slug": "dimillian", "default_category": "dev-workflow"},
+  {"repo": "cloudflare/skills",             "author": "Cloudflare",                   "slug": "cloudflare", "default_category": "dev-workflow"},
+  {"repo": "GPTomics/bioSkills",            "author": "GPTomics",                     "slug": "gptomics", "category": "data-science"},
+  {"repo": "lackeyjb/playwright-skill",     "author": "lackeyjb",                     "slug": "lackeyjb", "category": "qa-testing"}
+]

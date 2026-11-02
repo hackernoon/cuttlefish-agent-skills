@@ -1,0 +1,16 @@
+{
+  "name": "marketing-seo",
+  "version": "0.1.0",
+  "description": "Copywriting, SEO audits, pricing, launch and growth skills. 108 skills from Cloudflare, Corey Haines, Daniel Agrici, Tech Leads Club.",
+  "author": {
+    "name": "HackerNoon",
+    "url": "https://hackernoon.com/skills"
+  },
+  "homepage": "https://hackernoon.com/skills",
+  "license": "SEE ATTRIBUTION.md IN EACH SKILL",
+  "keywords": [
+    "skills",
+    "hackernoon",
+    "marketing-seo"
+  ]
+}
