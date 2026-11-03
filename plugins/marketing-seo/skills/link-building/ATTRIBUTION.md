@@ -1,9 +1,9 @@
 # Attribution
 
 - Skill: `link-building`
-- Author: Corey Haines
-- Source: https://github.com/coreyhaines31/marketingskills/tree/88c79f6528a9347420e57ceb1fff9a60de651768/skills/link-building
+- Author: Kostja
+- Source: https://github.com/kostja94/marketing-skills/tree/45143a7d6d8f92fc9048aa4f3074a26272bd0d2a/skills/seo/off-page/link-building
 - License: MIT (see LICENSE in this folder)
-- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills
+- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills/kostja94-link-building
 
 Republished unmodified apart from this file. All credit to the original author.

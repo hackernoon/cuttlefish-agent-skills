@@ -4,6 +4,6 @@
 - Author: Anthropic
 - Source: https://github.com/anthropics/skills/tree/ca45fc496a3436251f191354091d557da31c15b5/skills/mcp-builder
 - License: Apache-2.0 (see LICENSE in this folder)
-- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills
+- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills/anthropics-mcp-builder
 
 Republished unmodified apart from this file. All credit to the original author.

@@ -1,9 +1,9 @@
 # Attribution
 
 - Skill: `retro`
-- Author: Matt Pocock (Total TypeScript)
-- Source: https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/retro
+- Author: Garry Tan
+- Source: https://github.com/garrytan/gstack/tree/ade35bc81356e64c38772efa20b29021e69dcf51/retro
 - License: MIT (see LICENSE in this folder)
-- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills
+- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills/garrytan-retro
 
 Republished unmodified apart from this file. All credit to the original author.

@@ -1,37 +1,602 @@
 [
  {
   "repo": "anthropics/skills",
-  "path": "skills/doc-coauthoring",
+  "path": "skills/doc-coauthoring/SKILL.md",
+  "skill_id": "anthropics-doc-coauthoring",
   "reason": "license not redistributable"
  },
  {
-  "repo": "anthropics/skills",
-  "path": "skills/docx",
+  "repo": "mattpocock/skills",
+  "path": ".changeset/research-skill.md",
+  "skill_id": "mattpocock-changeset",
+  "reason": "not a SKILL.md file"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/deprecated/design-an-interface/SKILL.md",
+  "skill_id": "mattpocock-design-an-interface",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/deprecated/qa/SKILL.md",
+  "skill_id": "mattpocock-qa",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/deprecated/request-refactor-plan/SKILL.md",
+  "skill_id": "mattpocock-request-refactor-plan",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/deprecated/ubiquitous-language/SKILL.md",
+  "skill_id": "mattpocock-ubiquitous-language",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/engineering/resolving-merge-conflicts/SKILL.md",
+  "skill_id": "mattpocock-resolving-merge-conflicts",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/engineering/to-issues/SKILL.md",
+  "skill_id": "mattpocock-to-issues",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/engineering/to-prd/SKILL.md",
+  "skill_id": "mattpocock-to-prd",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/personal/edit-article/SKILL.md",
+  "skill_id": "mattpocock-edit-article",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/personal/obsidian-vault/SKILL.md",
+  "skill_id": "mattpocock-obsidian-vault",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "mattpocock/skills",
+  "path": "skills/productivity/writing-great-skills/SKILL.md",
+  "skill_id": "mattpocock-writing-great-skills",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "coreyhaines31/marketingskills",
+  "path": ".github/PULL_REQUEST_TEMPLATE/new-skill.md",
+  "skill_id": "coreyhaines31-pull-request-template",
+  "reason": "not a SKILL.md file"
+ },
+ {
+  "repo": "cloudflare/skills",
+  "path": "skills/sandbox-sdk/SKILL.md",
+  "skill_id": "cloudflare-sandbox-sdk",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "GPTomics/bioSkills",
+  "path": "bioskills-installer/SKILL.md",
+  "skill_id": "gptomics-bioinformatics",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/docx/SKILL.md",
+  "skill_id": "davila7-docx",
   "reason": "license not redistributable"
  },
  {
-  "repo": "anthropics/skills",
-  "path": "skills/pdf",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/docx-official/SKILL.md",
+  "skill_id": "davila7-docx-official",
   "reason": "license not redistributable"
  },
  {
-  "repo": "anthropics/skills",
-  "path": "skills/pptx",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/pdf-anthropic/SKILL.md",
+  "skill_id": "davila7-pdf",
   "reason": "license not redistributable"
  },
  {
-  "repo": "anthropics/skills",
-  "path": "skills/xlsx",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/pdf-official/SKILL.md",
+  "skill_id": "davila7-pdf-official",
   "reason": "license not redistributable"
  },
  {
-  "repo": "anthropics/skills",
-  "path": "template",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/pptx/SKILL.md",
+  "skill_id": "davila7-pptx",
   "reason": "license not redistributable"
  },
  {
-  "repo": "AgriciDaniel/claude-blog",
-  "path": "brain",
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/pptx-official/SKILL.md",
+  "skill_id": "davila7-pptx-official",
   "reason": "license not redistributable"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/xlsx/SKILL.md",
+  "skill_id": "davila7-xlsx",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/document-processing/xlsx-official/SKILL.md",
+  "skill_id": "davila7-xlsx-official",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/productivity/brainstorming/SKILL.md",
+  "skill_id": "davila7-claude-code-templates-brainstorming",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/scientific/document-skills/docx/SKILL.md",
+  "skill_id": "davila7-claude-code-templates-docx",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/scientific/document-skills/pptx/SKILL.md",
+  "skill_id": "davila7-claude-code-templates-pptx",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "davila7/claude-code-templates",
+  "path": "cli-tool/components/skills/scientific/document-skills/xlsx/SKILL.md",
+  "skill_id": "davila7-claude-code-templates-xlsx",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "microsoft/skills",
+  "path": ".github/plugins/azure-sdk-rust/skills/azure-servicebus-rust/SKILL.md",
+  "skill_id": "microsoft-azure-servicebus-rust",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "microsoft/skills",
+  "path": ".github/plugins/azure-skills/skills/azure-cost/SKILL.md",
+  "skill_id": "microsoft-azure-cost",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "microsoft/skills",
+  "path": ".github/plugins/azure-skills/skills/azure-hosted-copilot-sdk/SKILL.md",
+  "skill_id": "microsoft-azure-hosted-copilot-sdk",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "microsoft/skills",
+  "path": ".github/plugins/azure-skills/skills/azure-rbac/SKILL.md",
+  "skill_id": "microsoft-azure-rbac",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "wshobson/agents",
+  "path": "plugins/database-design/skills/postgresql/SKILL.md",
+  "skill_id": "wshobson-postgresql-table-design",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "garrytan/gstack",
+  "path": "test/fixtures/golden/claude-ship-SKILL.md",
+  "skill_id": "garrytan-gstack-ship",
+  "reason": "not a SKILL.md file"
+ },
+ {
+  "repo": "getsentry/skills",
+  "path": "skills/replay-ux-research/SKILL.md",
+  "skill_id": "getsentry-replay-ux-research",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "getsentry/skills",
+  "path": "skills/security-review/SKILL.md",
+  "skill_id": "getsentry-security-review",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "getsentry/skills",
+  "path": "skills/skill-writer/references/example-documentation-skill.md",
+  "skill_id": "getsentry-references",
+  "reason": "not a SKILL.md file"
+ },
+ {
+  "repo": "getsentry/skills",
+  "path": "skills/skill-writer/references/example-hook-backed-skill.md",
+  "skill_id": "getsentry-skills-references",
+  "reason": "not a SKILL.md file"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "ai-discoverability-audit/SKILL.md",
+  "skill_id": "brianrwagner-ai-discoverability-audit",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "case-study-builder/SKILL.md",
+  "skill_id": "brianrwagner-case-study-builder",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "cold-outreach-sequence/SKILL.md",
+  "skill_id": "brianrwagner-cold-outreach-sequence",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "content-idea-generator/SKILL.md",
+  "skill_id": "brianrwagner-content-idea-generator",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "daily-briefing-builder/SKILL.md",
+  "skill_id": "brianrwagner-daily-briefing-builder",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "de-ai-ify/SKILL.md",
+  "skill_id": "brianrwagner-de-ai-ify",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "go-mode/SKILL.md",
+  "skill_id": "brianrwagner-go-mode",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "homepage-audit/SKILL.md",
+  "skill_id": "brianrwagner-homepage-audit",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "last30days/SKILL.md",
+  "skill_id": "brianrwagner-last30days",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "linkedin-authority-builder/SKILL.md",
+  "skill_id": "brianrwagner-linkedin-authority-builder",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "linkedin-profile-optimizer/SKILL.md",
+  "skill_id": "brianrwagner-linkedin-profile-optimizer",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "marketing-principles/SKILL.md",
+  "skill_id": "brianrwagner-marketing-principles",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "meeting-prep/SKILL.md",
+  "skill_id": "brianrwagner-meeting-prep-cc",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "newsletter-creation-curation/SKILL.md",
+  "skill_id": "brianrwagner-newsletter-creation-curation",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "plan-my-day/SKILL.md",
+  "skill_id": "brianrwagner-plan-my-day",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "positioning-basics/SKILL.md",
+  "skill_id": "brianrwagner-positioning-basics",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "reddit-insights/SKILL.md",
+  "skill_id": "brianrwagner-reddit-insights",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "social-card-gen/SKILL.md",
+  "skill_id": "brianrwagner-social-card-gen",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "testimonial-collector/SKILL.md",
+  "skill_id": "brianrwagner-testimonial-collector",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "tweet-draft-reviewer/SKILL.md",
+  "skill_id": "brianrwagner-tweet-draft-reviewer",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "vault-cleanup-auditor/SKILL.md",
+  "skill_id": "brianrwagner-vault-cleanup-auditor",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "voice-extractor/SKILL.md",
+  "skill_id": "brianrwagner-voice-extractor",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "BrianRWagner/ai-marketing-claude-code-skills",
+  "path": "youtube-summarizer/SKILL.md",
+  "skill_id": "brianrwagner-youtube-summarizer",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "build/geo-content-optimizer/SKILL.md",
+  "skill_id": "aaron-he-zhu-geo-content-optimizer",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "build/meta-tags-optimizer/SKILL.md",
+  "skill_id": "aaron-he-zhu-meta-tags-optimizer",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "build/schema-markup-generator/SKILL.md",
+  "skill_id": "aaron-he-zhu-schema-markup-generator",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "build/seo-content-writer/SKILL.md",
+  "skill_id": "aaron-he-zhu-seo-content-writer",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "cross-cutting/content-quality-auditor/SKILL.md",
+  "skill_id": "aaron-he-zhu-content-quality-auditor",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "cross-cutting/domain-authority-auditor/SKILL.md",
+  "skill_id": "aaron-he-zhu-domain-authority-auditor",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "cross-cutting/entity-optimizer/SKILL.md",
+  "skill_id": "aaron-he-zhu-entity-optimizer",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "cross-cutting/memory-management/SKILL.md",
+  "skill_id": "aaron-he-zhu-memory-management",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "monitor/alert-manager/SKILL.md",
+  "skill_id": "aaron-he-zhu-alert-manager",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "monitor/backlink-analyzer/SKILL.md",
+  "skill_id": "aaron-he-zhu-backlink-analyzer",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "monitor/performance-reporter/SKILL.md",
+  "skill_id": "aaron-he-zhu-performance-reporter",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "monitor/rank-tracker/SKILL.md",
+  "skill_id": "aaron-he-zhu-rank-tracker",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "optimize/content-refresher/SKILL.md",
+  "skill_id": "aaron-he-zhu-content-refresher",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "optimize/internal-linking-optimizer/SKILL.md",
+  "skill_id": "aaron-he-zhu-internal-linking-optimizer",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "optimize/on-page-seo-auditor/SKILL.md",
+  "skill_id": "aaron-he-zhu-on-page-seo-auditor",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "optimize/technical-seo-checker/SKILL.md",
+  "skill_id": "aaron-he-zhu-technical-seo-checker",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "research/competitor-analysis/SKILL.md",
+  "skill_id": "aaron-he-zhu-competitor-analysis",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "research/content-gap-analysis/SKILL.md",
+  "skill_id": "aaron-he-zhu-content-gap-analysis",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "research/keyword-research/SKILL.md",
+  "skill_id": "aaron-he-zhu-keyword-research",
+  "reason": "no description"
+ },
+ {
+  "repo": "aaron-he-zhu/seo-geo-claude-skills",
+  "path": "research/serp-analysis/SKILL.md",
+  "skill_id": "aaron-he-zhu-serp-analysis",
+  "reason": "no description"
+ },
+ {
+  "repo": "expo/skills",
+  "path": "plugins/expo/skills/expo-tailwind-setup/SKILL.md",
+  "skill_id": "expo-expo-tailwind-setup",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/antfu-design/SKILL.md",
+  "skill_id": "antfu-antfu-design",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/slidev/SKILL.md",
+  "skill_id": "antfu-slidev",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/tsdown/SKILL.md",
+  "skill_id": "antfu-tsdown",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/turborepo/SKILL.md",
+  "skill_id": "antfu-turborepo",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/vue-best-practices/SKILL.md",
+  "skill_id": "antfu-vue-best-practices",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/vue-router-best-practices/SKILL.md",
+  "skill_id": "antfu-vue-router-best-practices",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/vue-testing-best-practices/SKILL.md",
+  "skill_id": "antfu-vue-testing-best-practices",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/vueuse-functions/SKILL.md",
+  "skill_id": "antfu-vueuse-functions",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "antfu/skills",
+  "path": "skills/web-design-guidelines/SKILL.md",
+  "skill_id": "antfu-web-design-guidelines",
+  "reason": "missing upstream (moved or deleted)"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/composition-patterns/SKILL.md",
+  "skill_id": "vercel-labs-vercel-composition-patterns",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/deploy-to-vercel/SKILL.md",
+  "skill_id": "vercel-labs-deploy-to-vercel",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/react-best-practices/SKILL.md",
+  "skill_id": "vercel-labs-vercel-react-best-practices",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/react-native-skills/SKILL.md",
+  "skill_id": "vercel-labs-vercel-react-native-skills",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/react-view-transitions/SKILL.md",
+  "skill_id": "vercel-labs-vercel-react-view-transitions",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/vercel-cli-with-tokens/SKILL.md",
+  "skill_id": "vercel-labs-vercel-cli-with-tokens",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/vercel-optimize/SKILL.md",
+  "skill_id": "vercel-labs-vercel-optimize",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/web-design-guidelines/SKILL.md",
+  "skill_id": "vercel-labs-web-design-guidelines",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "vercel-labs/agent-skills",
+  "path": "skills/writing-guidelines/SKILL.md",
+  "skill_id": "vercel-labs-writing-guidelines",
+  "reason": "license not redistributable"
+ },
+ {
+  "repo": "trycourier/courier-skills",
+  "path": "SKILL.md",
+  "skill_id": "trycourier-courier-notification-skills",
+  "reason": "missing upstream (moved or deleted)"
  }
 ]

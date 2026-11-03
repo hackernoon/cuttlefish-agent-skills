@@ -2,8 +2,8 @@
 
 - Skill: `blog-persona`
 - Author: Daniel Agrici
-- Source: https://github.com/AgriciDaniel/claude-blog/tree/354442348815a7f0327077ad89af2c43cf4b4ab4/skills/blog-persona
+- Source: https://github.com/AgriciDaniel/claude-blog/tree/4f9c2cb8fd17f594e868d6c2ce0e8fb2c971f987/skills/blog-persona
 - License: MIT (see LICENSE in this folder)
-- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills
+- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills/agricidaniel-blog-persona
 
 Republished unmodified apart from this file. All credit to the original author.

@@ -2,8 +2,8 @@
 
 - Skill: `turnstile-spin`
 - Author: Cloudflare
-- Source: https://github.com/cloudflare/skills/tree/1a33048817d06df12882cb881dfc754e7039954a/skills/turnstile-spin
+- Source: https://github.com/cloudflare/skills/tree/1f2cd0a19588e2c6197c91dd7c71729df1fb6156/skills/turnstile-spin
 - License: Apache-2.0 (see LICENSE in this folder)
-- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills
+- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills/cloudflare-turnstile-spin
 
 Republished unmodified apart from this file. All credit to the original author.
