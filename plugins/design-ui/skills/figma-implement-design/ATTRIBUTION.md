@@ -2,8 +2,8 @@
 
 - Skill: `figma-implement-design`
 - Author: Tech Leads Club
-- Source: https://github.com/tech-leads-club/agent-skills/tree/5929de5cd34f8cca03f3745265571f07b80c9106/packages/skills-catalog/skills/(design)/figma-implement-design
+- Source: https://github.com/tech-leads-club/agent-skills/tree/1da2195067c14ae5d44dc615b31cb26f50ebeb91/packages/skills-catalog/skills/(design)/figma-implement-design
 - License: Apache-2.0 (see LICENSE in this folder)
-- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills
+- Indexed by HackerNoon's SKILL.md Library: https://hackernoon.com/skills/tech-leads-club-figma-implement-design
 
 Republished unmodified apart from this file. All credit to the original author.

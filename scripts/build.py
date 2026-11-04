@@ -6,10 +6,17 @@ license allows redistribution (MIT / Apache-2.0 / BSD / CC-BY), copies each skil
 folder with its license and an ATTRIBUTION.md, sorts skills into category
 plugins, and writes .claude-plugin/marketplace.json plus catalog.json.
 
-Usage:  python3 scripts/build.py [--cache DIR]
+When scripts/skills.json exists (written by scripts/sync_sources.py from the
+Cuttlefish DB), only the skills listed there are built, with the DB's category.
+Without it, every SKILL.md in each repo is built and categorized by keyword.
+
+Usage:  python3 scripts/build.py [--cache DIR] [--refresh]
 """
-import argparse, json, re, shutil, subprocess, sys
+import argparse, json, os, re, shutil, subprocess, sys
 from pathlib import Path
+
+# Skills in the full library at hackernoon.com. Shown in the README; sync_sources.py updates it.
+LIBRARY_TOTAL = 2908
 
 ROOT = Path(__file__).resolve().parent.parent
 PLUGINS = ROOT / "plugins"
@@ -108,12 +115,63 @@ def categorize(src, name, desc):
     return src.get("default_category", "dev-workflow")
 
 
+def find_skills(local, src):
+    """Every SKILL.md in a repo, for sources without DB manifest entries."""
+    out = []
+    for skill_md in sorted(local.rglob("SKILL.md")):
+        sdir = skill_md.parent
+        rel = sdir.relative_to(local).as_posix()
+        if any(p.startswith(".") or p in ("node_modules", "test", "tests", "examples", "templates")
+               for p in sdir.relative_to(local).parts):
+            continue
+        if any(rel.startswith(x) for x in src.get("exclude", [])):
+            continue
+        out.append({"path": "" if rel == "." else rel, "file": "SKILL.md"})
+    return out
+
+
+def clone(repo, local, refresh):
+    if local.exists() and refresh:
+        print(f"updating {repo}", file=sys.stderr)
+        sh("git", "fetch", "-q", "--depth", "1", "origin", "HEAD", cwd=local)
+        sh("git", "reset", "-q", "--hard", "FETCH_HEAD", cwd=local)
+    elif not local.exists():
+        print(f"cloning {repo}", file=sys.stderr)
+        sh("git", "clone", "-q", "--depth", "1", f"https://github.com/{repo}.git", str(local))
+
+
+def find_skill_file(sdir):
+    """Actual on-disk name of the skill file (SKILL.md, or SKILL.MD etc. upstream), or None."""
+    if not sdir.is_dir():
+        return None
+    return next((n for n in sorted(os.listdir(sdir)) if n.upper() == "SKILL.MD" and (sdir / n).is_file()), None)
+
+
+def copy_skill(sdir, dest, nested):
+    """Copy a skill folder, leaving out .git/node_modules and any nested folder that is
+    its own skill (those are copied separately, so they are not duplicated)."""
+    base = shutil.ignore_patterns(".git", "node_modules", "*.pyc", "__pycache__", ".DS_Store")
+
+    def ignore(d, names):
+        skip = set(base(d, names))
+        skip |= {n for n in names if (Path(d) / n).resolve() in nested}
+        return skip
+
+    shutil.copytree(sdir, dest, ignore=ignore)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cache", default=str(ROOT / ".cache"))
+    ap.add_argument("--refresh", action="store_true", help="pull the latest commit of repos already in the cache")
     args = ap.parse_args()
     cache = Path(args.cache); cache.mkdir(parents=True, exist_ok=True)
     sources = json.loads((ROOT / "scripts" / "sources.json").read_text())
+    manifest_file = ROOT / "scripts" / "skills.json"
+    manifest = json.loads(manifest_file.read_text()) if manifest_file.exists() else None
+    by_repo = {}
+    for s in manifest or []:
+        by_repo.setdefault(s["repo"].lower(), []).append(s)
 
     # wipe generated category plugins (keep hand-written ones like hackernoon-originals)
     for cat in CATEGORIES:
@@ -122,45 +180,95 @@ def main():
     catalog, skipped, used = [], [], {c: set() for c in CATEGORIES}
     for src in sources:
         repo = src["repo"]; local = cache / repo.replace("/", "__")
-        if not local.exists():
-            print(f"cloning {repo}", file=sys.stderr)
-            sh("git", "clone", "-q", "--depth", "1", f"https://github.com/{repo}.git", str(local))
+        entries = by_repo.get(repo.lower()) if manifest is not None else None
+        if manifest is not None and not entries:
+            print(f"skipping {repo}: no skills listed for it in scripts/skills.json", file=sys.stderr)
+            continue
+        try:
+            clone(repo, local, args.refresh)
+        except subprocess.CalledProcessError as e:
+            skipped.append({"repo": repo, "path": "", "reason": f"clone failed: {(e.stderr or '').strip()[:200]}"})
+            print(f"clone failed for {repo}, skipping", file=sys.stderr)
+            continue
         commit = sh("git", "rev-parse", "HEAD", cwd=local)
         repo_lic_file, repo_lic_text = read_license(local)
-        for skill_md in sorted(local.rglob("SKILL.md")):
-            sdir = skill_md.parent
-            rel = sdir.relative_to(local).as_posix()
-            if any(p.startswith(".") or p in ("node_modules", "test", "tests", "examples", "templates")
-                   for p in sdir.relative_to(local).parts):
-                continue
-            if any(rel.startswith(x) for x in src.get("exclude", [])):
-                continue
+        entries = entries if entries is not None else find_skills(local, src)
+        skill_dirs = {(local / e["path"]).resolve() for e in entries if e["file"].upper() == "SKILL.MD"}
+
+        for entry in entries:
+            rel, fname = entry["path"], entry["file"]
+            where = f"{rel}/{fname}" if rel else fname
+            sdir = local / rel
+            # Only real SKILL.md files. Other .md files in the DB are templates or test fixtures.
+            if fname.upper() != "SKILL.MD":
+                skipped.append({"repo": repo, "path": where, "skill_id": entry.get("skill_id"),
+                                "reason": "not a SKILL.md file"}); continue
+            fname = find_skill_file(sdir)
+            if not fname and rel:  # moved within the repo? accept a single folder with the same name
+                moved = [p.parent for p in local.rglob("*") if p.name.upper() == "SKILL.MD"
+                         and p.parent.name == sdir.name and ".git" not in p.parts
+                         and p.parent.resolve() not in skill_dirs]  # not already listed as its own skill
+                if len(moved) == 1:
+                    sdir, rel = moved[0], moved[0].relative_to(local).as_posix()
+                    fname = find_skill_file(sdir)
+                    print(f"{repo}: {where} moved to {rel}", file=sys.stderr)
+            if not fname:
+                skipped.append({"repo": repo, "path": where, "skill_id": entry.get("skill_id"),
+                                "reason": "missing upstream (moved or deleted)"}); continue
+            skill_md = sdir / fname
             lic_file, lic_text = read_license(sdir)
             if not lic_file:
                 lic_file, lic_text = repo_lic_file, repo_lic_text
             spdx = classify_license(lic_text)
-            text = skill_md.read_text(errors="ignore")
-            fm = frontmatter(text)
+            fm = frontmatter(skill_md.read_text(errors="ignore"))
             name = re.sub(r"[^a-z0-9-]+", "-", (fm.get("name") or sdir.name).lower()).strip("-")
             if not spdx:
-                skipped.append({"repo": repo, "path": rel, "reason": "license not redistributable"}); continue
+                skipped.append({"repo": repo, "path": where, "skill_id": entry.get("skill_id"),
+                                "reason": "license not redistributable"}); continue
             if not fm.get("description"):
-                skipped.append({"repo": repo, "path": rel, "reason": "no description"}); continue
-            cat = categorize(src, name, fm["description"])
-            slug = name if name not in used[cat] else f"{src['slug']}-{name}"
+                skipped.append({"repo": repo, "path": where, "skill_id": entry.get("skill_id"),
+                                "reason": "no description"}); continue
+            # A repo-wide "category" in sources.json wins (hand-checked, e.g. bioSkills is all
+            # data-science even where the DB's keyword tagging says otherwise), then the DB's.
+            cat = src.get("category") or entry.get("category")
+            if cat not in CATEGORIES:
+                cat = categorize(src, name, fm["description"])
+            # Folder = the skill's own name (Agent Skills spec). On a clash use the
+            # library's skill_id, which is unique and matches hackernoon.com/skills/{id}.
+            slug = name
+            if slug in used[cat]:
+                slug = entry.get("skill_id") or f"{src['slug']}-{name}"
+            i = 2
+            while slug in used[cat]:
+                slug, i = f"{slug}-{i}", i + 1
             used[cat].add(slug)
             dest = PLUGINS / cat / "skills" / slug
-            shutil.copytree(sdir, dest, ignore=shutil.ignore_patterns(".git", "node_modules", "*.pyc", "__pycache__"))
+            if sdir.resolve() == local.resolve():
+                # Skill at the repo root: copy its top-level files only, not the whole repo.
+                dest.mkdir(parents=True)
+                for f in sdir.iterdir():
+                    if f.is_file() and not f.name.startswith("."):
+                        shutil.copy(f, dest / f.name)
+            else:
+                copy_skill(sdir, dest, skill_dirs - {sdir.resolve()})
+            if fname != "SKILL.md":  # e.g. SKILL.MD upstream: agents look for SKILL.md
+                tmp = dest / ".skill-rename"
+                (dest / fname).rename(tmp); tmp.rename(dest / "SKILL.md")
             if lic_file and not any((dest / n).exists() for n in ("LICENSE", "LICENSE.txt", "LICENSE.md")):
                 shutil.copy(lic_file, dest / "LICENSE")
             url = f"https://github.com/{repo}/tree/{commit}/{rel}"
+            sid = entry.get("skill_id")
+            page = f"https://hackernoon.com/skills/{sid}" if sid else "https://hackernoon.com/skills"
             (dest / "ATTRIBUTION.md").write_text(
                 f"# Attribution\n\n- Skill: `{name}`\n- Author: {src['author']}\n- Source: {url}\n"
                 f"- License: {spdx} (see LICENSE in this folder)\n- Indexed by HackerNoon's SKILL.md Library: "
-                f"https://hackernoon.com/skills\n\nRepublished unmodified apart from this file. All credit to the original author.\n")
-            catalog.append({"name": slug, "category": cat, "author": src["author"], "repo": repo,
-                            "path": rel, "commit": commit, "license": spdx,
-                            "description": fm["description"][:300]})
+                f"{page}\n\nRepublished unmodified apart from this file. All credit to the original author.\n")
+            item = {"name": slug, "category": cat, "author": src["author"], "repo": repo,
+                    "path": rel, "commit": commit, "license": spdx,
+                    "description": fm["description"][:300]}
+            if sid:
+                item["skill_id"] = sid
+            catalog.append(item)
 
     entries = []
     for cat, (title, desc) in CATEGORIES.items():
@@ -210,10 +318,12 @@ def update_readme(total, counts, entries, catalog):
     rows = ["| Plugin | Skills | Install |", "|---|---:|---|"]
     for e in entries:
         rows.append(f"| **{e['category']}** | {counts.get(e['name'], 0):,} | `/plugin install {e['name']}@cuttlefish` |")
-    blocks = {"COUNT": f"{total:,}", "AUTHORS": f"{authors:,}", "TABLE": "\n" + "\n".join(rows) + "\n"}
+    blocks = {"COUNT": f"{total:,}", "AUTHORS": f"{authors:,}", "LIB": f"{LIBRARY_TOTAL:,}",
+              "TABLE": "\n" + "\n".join(rows) + "\n"}
     for key, val in blocks.items():
         text = re.sub(rf"(<!-- {key} -->).*?(<!-- /{key} -->)", lambda m: m.group(1) + val + m.group(2), text, flags=re.S)
-    text = re.sub(r"skills-[0-9%2C,]+-", f"skills-{total:,}-".replace(",", "%2C"), text)
+    text = re.sub(r"badge/skills-[0-9%2C,]+-", f"badge/skills-{total:,}-".replace(",", "%2C"), text)
+    text = re.sub(r"badge/library-[0-9%2C,]+%20skills-", f"badge/library-{LIBRARY_TOTAL:,}%20skills-".replace(",", "%2C"), text)
     readme.write_text(text)
 
 

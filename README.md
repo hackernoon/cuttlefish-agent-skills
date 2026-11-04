@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/cuttlefish.svg" alt="Pixel cuttlefish" width="264">
+<img src="assets/cuttlefish-header.svg" alt="Pixel cuttlefish" width="100%">
 
 # Project Cuttlefish.MD
 
@@ -8,7 +8,7 @@
 
 **The SKILL.md Library by [HackerNoon](https://hackernoon.com), packaged as an installable Agent Skills marketplace.**
 
-[![Skills in this repo](https://img.shields.io/badge/skills-891-00ff41?style=flat-square)](catalog.json)
+[![Skills in this repo](https://img.shields.io/badge/skills-2%2C806-00ff41?style=flat-square)](catalog.json)
 [![Library](https://img.shields.io/badge/library-2%2C908%20skills-black?style=flat-square)](https://hackernoon.com/skills-md-library-project-cuttlefish-md)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-open%20standard-00ff41?style=flat-square)](https://agentskills.io)
 [![GitHub stars](https://img.shields.io/github/stars/hackernoon/cuttlefish-agent-skills?style=flat-square)](https://github.com/hackernoon/cuttlefish-agent-skills/stargazers)
@@ -53,20 +53,20 @@ Codex reads `.agents/skills/` in a project or `~/.agents/skills/` for every proj
 
 ## What's inside
 
-**<!-- COUNT -->891<!-- /COUNT --> skills from <!-- AUTHORS -->12<!-- /AUTHORS --> authors**, sorted into the same categories as the library:
+**<!-- COUNT -->2,806<!-- /COUNT --> skills from <!-- AUTHORS -->29<!-- /AUTHORS --> authors**, sorted into the same categories as the library:
 
 <!-- TABLE -->
 | Plugin | Skills | Install |
 |---|---:|---|
 | **HackerNoon Originals** | 1 | `/plugin install hackernoon-originals@cuttlefish` |
-| **Dev Workflow** | 131 | `/plugin install dev-workflow@cuttlefish` |
-| **Writing & Blogging** | 43 | `/plugin install writing-blogging@cuttlefish` |
-| **Design & UI** | 18 | `/plugin install design-ui@cuttlefish` |
-| **Marketing & SEO** | 108 | `/plugin install marketing-seo@cuttlefish` |
-| **QA & Testing** | 19 | `/plugin install qa-testing@cuttlefish` |
-| **Security** | 4 | `/plugin install security@cuttlefish` |
-| **Data & Science** | 563 | `/plugin install data-science@cuttlefish` |
-| **Learn Tech** | 4 | `/plugin install learn-tech@cuttlefish` |
+| **Dev Workflow** | 530 | `/plugin install dev-workflow@cuttlefish` |
+| **Writing & Blogging** | 706 | `/plugin install writing-blogging@cuttlefish` |
+| **Design & UI** | 131 | `/plugin install design-ui@cuttlefish` |
+| **Marketing & SEO** | 307 | `/plugin install marketing-seo@cuttlefish` |
+| **QA & Testing** | 422 | `/plugin install qa-testing@cuttlefish` |
+| **Security** | 102 | `/plugin install security@cuttlefish` |
+| **Data & Science** | 599 | `/plugin install data-science@cuttlefish` |
+| **Learn Tech** | 8 | `/plugin install learn-tech@cuttlefish` |
 <!-- /TABLE -->
 
 Each skill's author, source repo, exact commit and license are listed in [`catalog.json`](catalog.json).

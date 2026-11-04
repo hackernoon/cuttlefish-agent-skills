@@ -24,7 +24,7 @@
     {
       "name": "dev-workflow",
       "source": "./plugins/dev-workflow",
-      "description": "Planning, debugging, code review, git, agents and everyday engineering workflow skills. 131 skills from Anthropic, Cloudflare, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club, Thomas Ricouard.",
+      "description": "Planning, debugging, code review, git, agents and everyday engineering workflow skills. 530 skills from Addy Osmani, Anthony Fu, Anthropic, Cloudflare, CodeRabbit, Expo and more.",
       "version": "0.1.0",
       "category": "Dev Workflow",
       "keywords": [
@@ -36,7 +36,7 @@
     {
       "name": "writing-blogging",
       "source": "./plugins/writing-blogging",
-      "description": "Skills for drafting, structuring and editing blog posts, docs and research writing. 43 skills from Anthropic, Daniel Agrici, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club.",
+      "description": "Skills for drafting, structuring and editing blog posts, docs and research writing. 706 skills from Daniel Agrici, Daniel Avila, Jesse Vincent (obra), Kostja, Matt Pocock (Total TypeScript), Microsoft and more.",
       "version": "0.1.0",
       "category": "Writing & Blogging",
       "keywords": [
@@ -48,7 +48,7 @@
     {
       "name": "design-ui",
       "source": "./plugins/design-ui",
-      "description": "Frontend design, brand, canvas and visual-output skills. 18 skills from Anthropic, Matt Pocock (Total TypeScript), Tech Leads Club, Thomas Ricouard.",
+      "description": "Frontend design, brand, canvas and visual-output skills. 131 skills from Addy Osmani, Anthropic, Daniel Avila, Expo, Garry Tan, Kostja and more.",
       "version": "0.1.0",
       "category": "Design & UI",
       "keywords": [
@@ -60,7 +60,7 @@
     {
       "name": "marketing-seo",
       "source": "./plugins/marketing-seo",
-      "description": "Copywriting, SEO audits, pricing, launch and growth skills. 108 skills from Cloudflare, Corey Haines, Daniel Agrici, Tech Leads Club.",
+      "description": "Copywriting, SEO audits, pricing, launch and growth skills. 307 skills from Addy Osmani, Corey Haines, Daniel Agrici, Daniel Avila, Kostja, Pramod Dutta and more.",
       "version": "0.1.0",
       "category": "Marketing & SEO",
       "keywords": [
@@ -72,7 +72,7 @@
     {
       "name": "qa-testing",
       "source": "./plugins/qa-testing",
-      "description": "TDD, browser automation, QA and test-writing skills. 19 skills from Anthropic, Jesse Vincent (obra), Matt Pocock (Total TypeScript), Tech Leads Club, Vercel Labs, lackeyjb.",
+      "description": "TDD, browser automation, QA and test-writing skills. 422 skills from Addy Osmani, Anthony Fu, Anthropic, Daniel Avila, Garry Tan, Jesse Vincent (obra) and more.",
       "version": "0.1.0",
       "category": "QA & Testing",
       "keywords": [
@@ -84,7 +84,7 @@
     {
       "name": "security",
       "source": "./plugins/security",
-      "description": "Security audits, secure coding and vulnerability-review skills. 4 skills from Tech Leads Club.",
+      "description": "Security audits, secure coding and vulnerability-review skills. 102 skills from Addy Osmani, BehiSec, Cloudflare, Daniel Avila, Microsoft, Pramod Dutta and more.",
       "version": "0.1.0",
       "category": "Security",
       "keywords": [
@@ -96,7 +96,7 @@
     {
       "name": "data-science",
       "source": "./plugins/data-science",
-      "description": "Data analysis, scientific computing and bioinformatics skills (genomics, proteomics, single-cell and more). 563 skills from Cloudflare, GPTomics.",
+      "description": "Data analysis, scientific computing and bioinformatics skills (genomics, proteomics, single-cell and more). 599 skills from Daniel Avila, Expo, GPTomics, Kostja, Microsoft, Pramod Dutta and more.",
       "version": "0.1.0",
       "category": "Data & Science",
       "keywords": [
@@ -108,7 +108,7 @@
     {
       "name": "learn-tech",
       "source": "./plugins/learn-tech",
-      "description": "Skills that teach: tutorials, exercises and learning loops. 4 skills from Anthropic, Matt Pocock (Total TypeScript), Tech Leads Club.",
+      "description": "Skills that teach: tutorials, exercises and learning loops. 8 skills from Daniel Avila, Garry Tan, Kostja, Matt Pocock (Total TypeScript), Microsoft, Tech Leads Club.",
       "version": "0.1.0",
       "category": "Learn Tech",
       "keywords": [
