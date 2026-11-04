@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/cuttlefish.svg" alt="Pixel cuttlefish" width="264">
+<img src="assets/cuttlefish-header.svg" alt="Pixel cuttlefish" width="264">
 
 # Project Cuttlefish.MD
 
